@@ -1,0 +1,10 @@
+framework module AELog {
+  umbrella header "AELog.h"
+
+  export *
+  module * { export * }
+}
+
+module AELog.Swift {
+    header "AELog-Swift.h"
+}

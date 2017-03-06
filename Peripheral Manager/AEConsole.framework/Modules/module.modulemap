@@ -1,0 +1,10 @@
+framework module AEConsole {
+  umbrella header "AEConsole.h"
+
+  export *
+  module * { export * }
+}
+
+module AEConsole.Swift {
+    header "AEConsole-Swift.h"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BLECentralManager.getPeripheralUUID(number : Int) -&gt; String:BLE_Tools.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "a.array.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLECentralManager.isDeviceFound(name : String) -&gt; Bool:BLE_Tools.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "name.contains(name)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLECentralManager.isDeviceFound(uuidName : String) -&gt; Bool:BLE_Tools.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "peripherals[0].services">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

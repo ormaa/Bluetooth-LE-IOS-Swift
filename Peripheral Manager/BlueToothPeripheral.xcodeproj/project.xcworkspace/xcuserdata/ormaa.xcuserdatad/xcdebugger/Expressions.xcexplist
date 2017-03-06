@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BLEPeripheralManager.peripheralManagerDidUpdateState(CBPeripheralManager) -&gt; ():BLEPeripheralManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "peripheral.state">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLEPeripheralManager.peripheralManager(CBPeripheralManager, didReceiveWrite : [CBATTRequest]) -&gt; ():BLEPeripheralManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "requests[0].value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MyViewController.switchPeripheralOnOff(AnyObject) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "switchPeripheral.state">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLEPeripheralManager.notifyValue() -&gt; ():BLE_Tools.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.notifyCentral">
+            </PersistentString>
+            <PersistentString
+               value = "self.notifyCharac">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
