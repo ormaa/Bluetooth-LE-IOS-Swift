@@ -1,6 +1,6 @@
 //
 //  BLE_Tools.swift
-//  ProtecCard
+//  
 //
 //  Created by Olivier Robin on 01/03/2017.
 //  Copyright © 2017 fr.ormaa. All rights reserved.

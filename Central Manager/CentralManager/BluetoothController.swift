@@ -67,7 +67,7 @@ class BluetoothController: BLEProtocol {
         isConnecting = false
         disconnectEvent = false
         
-        //mainMenuDelegate?.displayText(message: "Recherche de votre Protec.Card")
+        //mainMenuDelegate?.displayText(message: "Recherche de votre device")
         log("----------------------------------------------------------------------")
         log("startDiscoverPeripherals")
         
