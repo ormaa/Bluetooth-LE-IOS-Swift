@@ -15,6 +15,8 @@ I work for French company, but also for any company where we can talk in English
 
 During 6 years, I worked for a US Company ( Bioclinica ). The time spent with them was great. Now, Since megin of 2016, I decided to work for my own company, in order to choose my project, my technology, my method of work, my road map...
 
+More infos on my Website : www.ormaa.fr
+
 # The Central manager 
 
 This application will be able to be connected to a peripheral, read a value, write a value, be notifyed for value modified on peripheral side.
