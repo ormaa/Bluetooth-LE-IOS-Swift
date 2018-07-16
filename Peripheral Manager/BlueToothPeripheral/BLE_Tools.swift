@@ -33,7 +33,7 @@ extension BLEPeripheralManager {
     
     
 
-    func notifyValue() {
+    @objc func notifyValue() {
         delegate?.logToScreen(text: "Notify a value to central manager")
         
         // Set the data to notify

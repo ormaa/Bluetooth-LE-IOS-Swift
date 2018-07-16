@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C0019551E6D51B700B05304 /* BLE_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0019541E6D51B700B05304 /* BLE_Protocol.swift */; };
 		1C2516A31DC688080069E6AB /* BLE_PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2516A21DC688080069E6AB /* BLE_PeripheralManager.swift */; };
-		1C4A02921E225306006FF722 /* AEConsole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A02901E225306006FF722 /* AEConsole.framework */; };
-		1C4A02931E225306006FF722 /* AEConsole.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A02901E225306006FF722 /* AEConsole.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1C4A02941E225306006FF722 /* AELog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A02911E225306006FF722 /* AELog.framework */; };
-		1C4A02951E225306006FF722 /* AELog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4A02911E225306006FF722 /* AELog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C4D538D1E6D59290013BD02 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4D538C1E6D59290013BD02 /* BLE_Tools.swift */; };
 		1CFB9B341DC5EA6800C51C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB9B331DC5EA6800C51C7E /* AppDelegate.swift */; };
 		1CFB9B361DC5EA6800C51C7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB9B351DC5EA6800C51C7E /* ViewController.swift */; };
@@ -23,26 +19,9 @@
 		1CFB9B561DC6696100C51C7E /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB9B551DC6696100C51C7E /* Tools.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1C4A02961E225306006FF722 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1C4A02931E225306006FF722 /* AEConsole.framework in Embed Frameworks */,
-				1C4A02951E225306006FF722 /* AELog.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1C0019541E6D51B700B05304 /* BLE_Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Protocol.swift; sourceTree = "<group>"; };
 		1C2516A21DC688080069E6AB /* BLE_PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_PeripheralManager.swift; sourceTree = "<group>"; };
-		1C4A02901E225306006FF722 /* AEConsole.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AEConsole.framework; sourceTree = "<group>"; };
-		1C4A02911E225306006FF722 /* AELog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AELog.framework; sourceTree = "<group>"; };
 		1C4D538C1E6D59290013BD02 /* BLE_Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Tools.swift; sourceTree = "<group>"; };
 		1CFB9B301DC5EA6800C51C7E /* BlueToothPeripheral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothPeripheral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFB9B331DC5EA6800C51C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4A02921E225306006FF722 /* AEConsole.framework in Frameworks */,
 				1CFB9B4C1DC5EDAA00C51C7E /* CoreBluetooth.framework in Frameworks */,
-				1C4A02941E225306006FF722 /* AELog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +49,6 @@
 		1CFB9B271DC5EA6800C51C7E = {
 			isa = PBXGroup;
 			children = (
-				1C4A02901E225306006FF722 /* AEConsole.framework */,
-				1C4A02911E225306006FF722 /* AELog.framework */,
 				1CFB9B321DC5EA6800C51C7E /* BlueToothPeripheral */,
 				1CFB9B311DC5EA6800C51C7E /* Products */,
 				1CFB9B4A1DC5EDAA00C51C7E /* Frameworks */,
@@ -123,7 +98,6 @@
 				1CFB9B2C1DC5EA6800C51C7E /* Sources */,
 				1CFB9B2D1DC5EA6800C51C7E /* Frameworks */,
 				1CFB9B2E1DC5EA6800C51C7E /* Resources */,
-				1C4A02961E225306006FF722 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ormaa.BlueToothPeripheral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -349,7 +323,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ormaa.BlueToothPeripheral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

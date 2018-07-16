@@ -8,7 +8,7 @@
 
 
 import Foundation
-import UIKit
+//import UIKit
 import CoreBluetooth
 
 
@@ -28,7 +28,12 @@ extension BLECentralManager {
     func initCentralManager(bleDelegate: BLEProtocol) {
         self.bleDelegate = bleDelegate
 
-        appDelegate =  UIApplication.shared.delegate as! AppDelegate?
+//        #if IOS
+//        appDelegate =  UIApplication.shared.delegate as! AppDelegate?
+//        #endif
+//        #if MACOS
+//        appDelegate =  UIApplication.shared.delegate as! AppDelegate?
+//        #endif
         
         log("initCentralManager - Starting CentralManager")
         bleError = ""

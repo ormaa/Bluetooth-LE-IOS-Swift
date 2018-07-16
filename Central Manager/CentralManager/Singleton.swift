@@ -1,5 +1,6 @@
-import UIKit
+//import UIKit
 
+import Foundation
 
 //Model singleton so that we can refer to this from throughout the app.
 let appControllerSingletonGlobal = Singleton()

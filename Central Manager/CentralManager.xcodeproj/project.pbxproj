@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093E2EED20FCE19F00579D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093E2EEC20FCE19F00579D33 /* AppDelegate.swift */; };
+		093E2EEF20FCE19F00579D33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093E2EEE20FCE19F00579D33 /* ViewController.swift */; };
+		093E2EF120FCE1A000579D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093E2EF020FCE1A000579D33 /* Assets.xcassets */; };
+		093E2EF420FCE1A000579D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093E2EF220FCE1A000579D33 /* Main.storyboard */; };
+		093E2EFA20FCE1B000579D33 /* BLE_CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2801E6B1FBD00DDD431 /* BLE_CentralManager.swift */; };
+		093E2EFB20FCE1B600579D33 /* BLE_InitStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2811E6B1FBD00DDD431 /* BLE_InitStartStop.swift */; };
+		093E2EFC20FCE1B600579D33 /* BLE_ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2821E6B1FBD00DDD431 /* BLE_ReadWrite.swift */; };
+		093E2EFD20FCE1B600579D33 /* BLE_ServicesCharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2831E6B1FBD00DDD431 /* BLE_ServicesCharacteristics.swift */; };
+		093E2EFE20FCE1B600579D33 /* BLE_Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2841E6B1FBD00DDD431 /* BLE_Connection.swift */; };
+		093E2EFF20FCE1B600579D33 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2851E6B1FBD00DDD431 /* BLE_Tools.swift */; };
+		093E2F0020FCE1B600579D33 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2991E6B277600DDD431 /* Datas.swift */; };
+		093E2F0120FCE1B600579D33 /* BLEProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F28F1E6B214700DDD431 /* BLEProtocol.swift */; };
+		093E2F0320FCE21D00579D33 /* Tools_MACOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093E2F0220FCE21D00579D33 /* Tools_MACOS.swift */; };
+		093E2F0420FCE24D00579D33 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F27E1E6B1FAE00DDD431 /* Singleton.swift */; };
+		093E2F0520FCE27600579D33 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2941E6B228200DDD431 /* BluetoothController.swift */; };
+		093E2F0620FCE30E00579D33 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F29B1E6B318F00DDD431 /* Extensions.swift */; };
+		093E2F0720FCE31E00579D33 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2961E6B22E900DDD431 /* Log.swift */; };
 		1C10F26C1E6B1F7B00DDD431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F26B1E6B1F7B00DDD431 /* AppDelegate.swift */; };
 		1C10F26E1E6B1F7B00DDD431 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F26D1E6B1F7B00DDD431 /* ViewController.swift */; };
 		1C10F2711E6B1F7B00DDD431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C10F26F1E6B1F7B00DDD431 /* Main.storyboard */; };
@@ -28,6 +45,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		093E2EEA20FCE19F00579D33 /* CentralManager_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CentralManager_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		093E2EEC20FCE19F00579D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		093E2EEE20FCE19F00579D33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		093E2EF020FCE1A000579D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		093E2EF320FCE1A000579D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		093E2EF520FCE1A000579D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		093E2EF620FCE1A000579D33 /* CentralManager_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CentralManager_MacOS.entitlements; sourceTree = "<group>"; };
+		093E2F0220FCE21D00579D33 /* Tools_MACOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools_MACOS.swift; sourceTree = "<group>"; };
 		1C10F2681E6B1F7B00DDD431 /* CentralManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CentralManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C10F26B1E6B1F7B00DDD431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C10F26D1E6B1F7B00DDD431 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		093E2EE720FCE19F00579D33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C10F2651E6B1F7B00DDD431 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,10 +94,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093E2EEB20FCE19F00579D33 /* CentralManager_MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				093E2EEC20FCE19F00579D33 /* AppDelegate.swift */,
+				093E2EEE20FCE19F00579D33 /* ViewController.swift */,
+				093E2EF020FCE1A000579D33 /* Assets.xcassets */,
+				093E2EF220FCE1A000579D33 /* Main.storyboard */,
+				093E2EF520FCE1A000579D33 /* Info.plist */,
+				093E2EF620FCE1A000579D33 /* CentralManager_MacOS.entitlements */,
+				093E2F0220FCE21D00579D33 /* Tools_MACOS.swift */,
+			);
+			path = CentralManager_MacOS;
+			sourceTree = "<group>";
+		};
+		093E2F0820FCE37300579D33 /* SharedCode */ = {
+			isa = PBXGroup;
+			children = (
+				1C10F2961E6B22E900DDD431 /* Log.swift */,
+				1C10F29B1E6B318F00DDD431 /* Extensions.swift */,
+				1C10F2941E6B228200DDD431 /* BluetoothController.swift */,
+			);
+			path = SharedCode;
+			sourceTree = "<group>";
+		};
 		1C10F25F1E6B1F7B00DDD431 = {
 			isa = PBXGroup;
 			children = (
+				093E2F0820FCE37300579D33 /* SharedCode */,
 				1C10F26A1E6B1F7B00DDD431 /* CentralManager */,
+				093E2EEB20FCE19F00579D33 /* CentralManager_MacOS */,
 				1C10F2691E6B1F7B00DDD431 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				1C10F2681E6B1F7B00DDD431 /* CentralManager.app */,
+				093E2EEA20FCE19F00579D33 /* CentralManager_MacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,7 +147,6 @@
 				1C10F28C1E6B200D00DDD431 /* Singleton */,
 				1C10F27D1E6B1F9200DDD431 /* BLE Stack */,
 				1C10F26D1E6B1F7B00DDD431 /* ViewController.swift */,
-				1C10F2941E6B228200DDD431 /* BluetoothController.swift */,
 			);
 			path = CentralManager;
 			sourceTree = "<group>";
@@ -138,9 +196,7 @@
 		1C10F2931E6B21AC00DDD431 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				1C10F29B1E6B318F00DDD431 /* Extensions.swift */,
 				1C10F2911E6B21A700DDD431 /* Tools.swift */,
-				1C10F2961E6B22E900DDD431 /* Log.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -148,6 +204,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		093E2EE920FCE19F00579D33 /* CentralManager_MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 093E2EF920FCE1A000579D33 /* Build configuration list for PBXNativeTarget "CentralManager_MacOS" */;
+			buildPhases = (
+				093E2EE620FCE19F00579D33 /* Sources */,
+				093E2EE720FCE19F00579D33 /* Frameworks */,
+				093E2EE820FCE19F00579D33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CentralManager_MacOS;
+			productName = CentralManager_MacOS;
+			productReference = 093E2EEA20FCE19F00579D33 /* CentralManager_MacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1C10F2671E6B1F7B00DDD431 /* CentralManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C10F27A1E6B1F7B00DDD431 /* Build configuration list for PBXNativeTarget "CentralManager" */;
@@ -171,10 +244,15 @@
 		1C10F2601E6B1F7B00DDD431 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = fr.ormaa;
 				TargetAttributes = {
+					093E2EE920FCE19F00579D33 = {
+						CreatedOnToolsVersion = 9.4;
+						DevelopmentTeam = QP9H83DB6M;
+						ProvisioningStyle = Automatic;
+					};
 					1C10F2671E6B1F7B00DDD431 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QP9H83DB6M;
@@ -201,11 +279,21 @@
 			projectRoot = "";
 			targets = (
 				1C10F2671E6B1F7B00DDD431 /* CentralManager */,
+				093E2EE920FCE19F00579D33 /* CentralManager_MacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		093E2EE820FCE19F00579D33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093E2EF120FCE1A000579D33 /* Assets.xcassets in Resources */,
+				093E2EF420FCE1A000579D33 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C10F2661E6B1F7B00DDD431 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +307,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		093E2EE620FCE19F00579D33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093E2EFE20FCE1B600579D33 /* BLE_Connection.swift in Sources */,
+				093E2F0420FCE24D00579D33 /* Singleton.swift in Sources */,
+				093E2F0720FCE31E00579D33 /* Log.swift in Sources */,
+				093E2EFD20FCE1B600579D33 /* BLE_ServicesCharacteristics.swift in Sources */,
+				093E2EFB20FCE1B600579D33 /* BLE_InitStartStop.swift in Sources */,
+				093E2EFA20FCE1B000579D33 /* BLE_CentralManager.swift in Sources */,
+				093E2F0520FCE27600579D33 /* BluetoothController.swift in Sources */,
+				093E2F0020FCE1B600579D33 /* Datas.swift in Sources */,
+				093E2F0320FCE21D00579D33 /* Tools_MACOS.swift in Sources */,
+				093E2EFC20FCE1B600579D33 /* BLE_ReadWrite.swift in Sources */,
+				093E2EFF20FCE1B600579D33 /* BLE_Tools.swift in Sources */,
+				093E2EEF20FCE19F00579D33 /* ViewController.swift in Sources */,
+				093E2EED20FCE19F00579D33 /* AppDelegate.swift in Sources */,
+				093E2F0120FCE1B600579D33 /* BLEProtocol.swift in Sources */,
+				093E2F0620FCE30E00579D33 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C10F2641E6B1F7B00DDD431 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +354,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		093E2EF220FCE1A000579D33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				093E2EF320FCE1A000579D33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		1C10F26F1E6B1F7B00DDD431 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -263,6 +381,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		093E2EF720FCE1A000579D33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = CentralManager_MacOS/CentralManager_MacOS.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QP9H83DB6M;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CentralManager_MacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.ormaa.CentralManager-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		093E2EF820FCE1A000579D33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = CentralManager_MacOS/CentralManager_MacOS.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QP9H83DB6M;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CentralManager_MacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.ormaa.CentralManager-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		1C10F2781E6B1F7B00DDD431 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -365,7 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ormaa.CentralManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -380,13 +562,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ormaa.CentralManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		093E2EF920FCE1A000579D33 /* Build configuration list for PBXNativeTarget "CentralManager_MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093E2EF720FCE1A000579D33 /* Debug */,
+				093E2EF820FCE1A000579D33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1C10F2631E6B1F7B00DDD431 /* Build configuration list for PBXProject "CentralManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
