@@ -1,6 +1,6 @@
 # Bluetooth LE IOS Swift
 
-This project contains 3 applications, written in Swift 3, for IOS 10.
+This project contains 3 applications, written in Swift 4.1, for IOS 11
 
 - a central manager, which will comunicate with bluetooth peripheral
 - a peripheral manager, which will simulate a bluetooth device, for people who don't have real bluetooth developpement board
