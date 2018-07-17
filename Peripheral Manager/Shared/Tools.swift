@@ -7,7 +7,15 @@
 //
 
 import Foundation
+
+#if os(iOS) || os(watchOS) || os(tvOS)
 import UserNotifications
+#elseif os(OSX)
+import Cocoa
+#else
+// something else :o)
+#endif
+
 
 class Tools {
     

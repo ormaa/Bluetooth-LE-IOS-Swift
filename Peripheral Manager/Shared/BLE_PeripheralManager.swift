@@ -8,8 +8,14 @@
 
 import Foundation
 import CoreBluetooth
-import UIKit
+#if os(iOS) || os(watchOS) || os(tvOS)
 import UserNotifications
+#elseif os(OSX)
+import Cocoa
+#else
+// something else :o)
+#endif
+
 
 // Apple documentation :
 // https://developer.apple.com/library/content/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/CoreBluetoothBackgroundProcessingForIOSApps/PerformingTasksWhileYourAppIsInTheBackground.html
