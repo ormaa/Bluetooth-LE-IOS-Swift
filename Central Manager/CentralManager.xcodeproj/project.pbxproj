@@ -11,36 +11,36 @@
 		093E2EEF20FCE19F00579D33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093E2EEE20FCE19F00579D33 /* ViewController.swift */; };
 		093E2EF120FCE1A000579D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093E2EF020FCE1A000579D33 /* Assets.xcassets */; };
 		093E2EF420FCE1A000579D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093E2EF220FCE1A000579D33 /* Main.storyboard */; };
-		093E2EFA20FCE1B000579D33 /* BLE_CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2801E6B1FBD00DDD431 /* BLE_CentralManager.swift */; };
-		093E2EFB20FCE1B600579D33 /* BLE_InitStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2811E6B1FBD00DDD431 /* BLE_InitStartStop.swift */; };
-		093E2EFC20FCE1B600579D33 /* BLE_ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2821E6B1FBD00DDD431 /* BLE_ReadWrite.swift */; };
-		093E2EFD20FCE1B600579D33 /* BLE_ServicesCharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2831E6B1FBD00DDD431 /* BLE_ServicesCharacteristics.swift */; };
-		093E2EFE20FCE1B600579D33 /* BLE_Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2841E6B1FBD00DDD431 /* BLE_Connection.swift */; };
-		093E2EFF20FCE1B600579D33 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2851E6B1FBD00DDD431 /* BLE_Tools.swift */; };
-		093E2F0020FCE1B600579D33 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2991E6B277600DDD431 /* Datas.swift */; };
-		093E2F0120FCE1B600579D33 /* BLEProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F28F1E6B214700DDD431 /* BLEProtocol.swift */; };
 		093E2F0320FCE21D00579D33 /* Tools_MACOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093E2F0220FCE21D00579D33 /* Tools_MACOS.swift */; };
 		093E2F0420FCE24D00579D33 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F27E1E6B1FAE00DDD431 /* Singleton.swift */; };
 		093E2F0520FCE27600579D33 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2941E6B228200DDD431 /* BluetoothController.swift */; };
 		093E2F0620FCE30E00579D33 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F29B1E6B318F00DDD431 /* Extensions.swift */; };
 		093E2F0720FCE31E00579D33 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2961E6B22E900DDD431 /* Log.swift */; };
+		09DE2FC520FDE58100E3AF89 /* BLE_ServicesCharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FBE20FDE58100E3AF89 /* BLE_ServicesCharacteristics.swift */; };
+		09DE2FC620FDE58100E3AF89 /* BLE_InitStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FBF20FDE58100E3AF89 /* BLE_InitStartStop.swift */; };
+		09DE2FC720FDE58100E3AF89 /* BLE_CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC020FDE58100E3AF89 /* BLE_CentralManager.swift */; };
+		09DE2FC820FDE58100E3AF89 /* BLE_ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC120FDE58100E3AF89 /* BLE_ReadWrite.swift */; };
+		09DE2FC920FDE58100E3AF89 /* BLE_Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC220FDE58100E3AF89 /* BLE_Connection.swift */; };
+		09DE2FCA20FDE58100E3AF89 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC320FDE58100E3AF89 /* BLE_Tools.swift */; };
+		09DE2FCB20FDE58100E3AF89 /* BLEProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC420FDE58100E3AF89 /* BLEProtocol.swift */; };
+		09DE2FCD20FDE59C00E3AF89 /* BLE_CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC020FDE58100E3AF89 /* BLE_CentralManager.swift */; };
+		09DE2FCE20FDE59C00E3AF89 /* BLE_Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC220FDE58100E3AF89 /* BLE_Connection.swift */; };
+		09DE2FCF20FDE59C00E3AF89 /* BLE_InitStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FBF20FDE58100E3AF89 /* BLE_InitStartStop.swift */; };
+		09DE2FD020FDE59C00E3AF89 /* BLE_ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC120FDE58100E3AF89 /* BLE_ReadWrite.swift */; };
+		09DE2FD120FDE59C00E3AF89 /* BLE_ServicesCharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FBE20FDE58100E3AF89 /* BLE_ServicesCharacteristics.swift */; };
+		09DE2FD220FDE59C00E3AF89 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC320FDE58100E3AF89 /* BLE_Tools.swift */; };
+		09DE2FD320FDE59C00E3AF89 /* BLEProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FC420FDE58100E3AF89 /* BLEProtocol.swift */; };
+		09DE2FD620FDE66700E3AF89 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FD520FDE66700E3AF89 /* Datas.swift */; };
+		09DE2FD720FDE66700E3AF89 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE2FD520FDE66700E3AF89 /* Datas.swift */; };
 		1C10F26C1E6B1F7B00DDD431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F26B1E6B1F7B00DDD431 /* AppDelegate.swift */; };
 		1C10F26E1E6B1F7B00DDD431 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F26D1E6B1F7B00DDD431 /* ViewController.swift */; };
 		1C10F2711E6B1F7B00DDD431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C10F26F1E6B1F7B00DDD431 /* Main.storyboard */; };
 		1C10F2731E6B1F7B00DDD431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C10F2721E6B1F7B00DDD431 /* Assets.xcassets */; };
 		1C10F2761E6B1F7B00DDD431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C10F2741E6B1F7B00DDD431 /* LaunchScreen.storyboard */; };
 		1C10F27F1E6B1FAE00DDD431 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F27E1E6B1FAE00DDD431 /* Singleton.swift */; };
-		1C10F2861E6B1FBD00DDD431 /* BLE_CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2801E6B1FBD00DDD431 /* BLE_CentralManager.swift */; };
-		1C10F2871E6B1FBD00DDD431 /* BLE_InitStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2811E6B1FBD00DDD431 /* BLE_InitStartStop.swift */; };
-		1C10F2881E6B1FBD00DDD431 /* BLE_ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2821E6B1FBD00DDD431 /* BLE_ReadWrite.swift */; };
-		1C10F2891E6B1FBD00DDD431 /* BLE_ServicesCharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2831E6B1FBD00DDD431 /* BLE_ServicesCharacteristics.swift */; };
-		1C10F28A1E6B1FBD00DDD431 /* BLE_Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2841E6B1FBD00DDD431 /* BLE_Connection.swift */; };
-		1C10F28B1E6B1FBD00DDD431 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2851E6B1FBD00DDD431 /* BLE_Tools.swift */; };
-		1C10F2901E6B214700DDD431 /* BLEProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F28F1E6B214700DDD431 /* BLEProtocol.swift */; };
 		1C10F2921E6B21A700DDD431 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2911E6B21A700DDD431 /* Tools.swift */; };
 		1C10F2951E6B228200DDD431 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2941E6B228200DDD431 /* BluetoothController.swift */; };
 		1C10F2971E6B22E900DDD431 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2961E6B22E900DDD431 /* Log.swift */; };
-		1C10F29A1E6B277600DDD431 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F2991E6B277600DDD431 /* Datas.swift */; };
 		1C10F29C1E6B318F00DDD431 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10F29B1E6B318F00DDD431 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +53,14 @@
 		093E2EF520FCE1A000579D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		093E2EF620FCE1A000579D33 /* CentralManager_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CentralManager_MacOS.entitlements; sourceTree = "<group>"; };
 		093E2F0220FCE21D00579D33 /* Tools_MACOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools_MACOS.swift; sourceTree = "<group>"; };
+		09DE2FBE20FDE58100E3AF89 /* BLE_ServicesCharacteristics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_ServicesCharacteristics.swift; sourceTree = "<group>"; };
+		09DE2FBF20FDE58100E3AF89 /* BLE_InitStartStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_InitStartStop.swift; sourceTree = "<group>"; };
+		09DE2FC020FDE58100E3AF89 /* BLE_CentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_CentralManager.swift; sourceTree = "<group>"; };
+		09DE2FC120FDE58100E3AF89 /* BLE_ReadWrite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_ReadWrite.swift; sourceTree = "<group>"; };
+		09DE2FC220FDE58100E3AF89 /* BLE_Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Connection.swift; sourceTree = "<group>"; };
+		09DE2FC320FDE58100E3AF89 /* BLE_Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Tools.swift; sourceTree = "<group>"; };
+		09DE2FC420FDE58100E3AF89 /* BLEProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEProtocol.swift; sourceTree = "<group>"; };
+		09DE2FD520FDE66700E3AF89 /* Datas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		1C10F2681E6B1F7B00DDD431 /* CentralManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CentralManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C10F26B1E6B1F7B00DDD431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C10F26D1E6B1F7B00DDD431 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,18 +69,10 @@
 		1C10F2751E6B1F7B00DDD431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C10F2771E6B1F7B00DDD431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C10F27E1E6B1FAE00DDD431 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		1C10F2801E6B1FBD00DDD431 /* BLE_CentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_CentralManager.swift; sourceTree = "<group>"; };
-		1C10F2811E6B1FBD00DDD431 /* BLE_InitStartStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_InitStartStop.swift; sourceTree = "<group>"; };
-		1C10F2821E6B1FBD00DDD431 /* BLE_ReadWrite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_ReadWrite.swift; sourceTree = "<group>"; };
-		1C10F2831E6B1FBD00DDD431 /* BLE_ServicesCharacteristics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_ServicesCharacteristics.swift; sourceTree = "<group>"; };
-		1C10F2841E6B1FBD00DDD431 /* BLE_Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Connection.swift; sourceTree = "<group>"; };
-		1C10F2851E6B1FBD00DDD431 /* BLE_Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Tools.swift; sourceTree = "<group>"; };
-		1C10F28F1E6B214700DDD431 /* BLEProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEProtocol.swift; sourceTree = "<group>"; };
 		1C10F2911E6B21A700DDD431 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		1C10F2941E6B228200DDD431 /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		1C10F2961E6B22E900DDD431 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		1C10F2981E6B239000DDD431 /* CentralManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CentralManager.entitlements; sourceTree = "<group>"; };
-		1C10F2991E6B277600DDD431 /* Datas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		1C10F29B1E6B318F00DDD431 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,12 +97,10 @@
 		093E2EEB20FCE19F00579D33 /* CentralManager_MacOS */ = {
 			isa = PBXGroup;
 			children = (
-				093E2EEC20FCE19F00579D33 /* AppDelegate.swift */,
-				093E2EEE20FCE19F00579D33 /* ViewController.swift */,
-				093E2EF020FCE1A000579D33 /* Assets.xcassets */,
-				093E2EF220FCE1A000579D33 /* Main.storyboard */,
-				093E2EF520FCE1A000579D33 /* Info.plist */,
 				093E2EF620FCE1A000579D33 /* CentralManager_MacOS.entitlements */,
+				09DE2FD420FDE5A600E3AF89 /* Supporting files */,
+				093E2EEE20FCE19F00579D33 /* ViewController.swift */,
+				093E2EF220FCE1A000579D33 /* Main.storyboard */,
 				093E2F0220FCE21D00579D33 /* Tools_MACOS.swift */,
 			);
 			path = CentralManager_MacOS;
@@ -111,11 +109,37 @@
 		093E2F0820FCE37300579D33 /* SharedCode */ = {
 			isa = PBXGroup;
 			children = (
+				09DE2FD520FDE66700E3AF89 /* Datas.swift */,
+				09DE2FCC20FDE58600E3AF89 /* BLE Stack */,
 				1C10F2961E6B22E900DDD431 /* Log.swift */,
 				1C10F29B1E6B318F00DDD431 /* Extensions.swift */,
 				1C10F2941E6B228200DDD431 /* BluetoothController.swift */,
 			);
 			path = SharedCode;
+			sourceTree = "<group>";
+		};
+		09DE2FCC20FDE58600E3AF89 /* BLE Stack */ = {
+			isa = PBXGroup;
+			children = (
+				09DE2FC020FDE58100E3AF89 /* BLE_CentralManager.swift */,
+				09DE2FC220FDE58100E3AF89 /* BLE_Connection.swift */,
+				09DE2FBF20FDE58100E3AF89 /* BLE_InitStartStop.swift */,
+				09DE2FC120FDE58100E3AF89 /* BLE_ReadWrite.swift */,
+				09DE2FBE20FDE58100E3AF89 /* BLE_ServicesCharacteristics.swift */,
+				09DE2FC320FDE58100E3AF89 /* BLE_Tools.swift */,
+				09DE2FC420FDE58100E3AF89 /* BLEProtocol.swift */,
+			);
+			path = "BLE Stack";
+			sourceTree = "<group>";
+		};
+		09DE2FD420FDE5A600E3AF89 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				093E2EF520FCE1A000579D33 /* Info.plist */,
+				093E2EEC20FCE19F00579D33 /* AppDelegate.swift */,
+				093E2EF020FCE1A000579D33 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		1C10F25F1E6B1F7B00DDD431 = {
@@ -145,25 +169,9 @@
 				1C10F28D1E6B207D00DDD431 /* Supporting Files */,
 				1C10F28E1E6B209000DDD431 /* StoryBoards */,
 				1C10F28C1E6B200D00DDD431 /* Singleton */,
-				1C10F27D1E6B1F9200DDD431 /* BLE Stack */,
 				1C10F26D1E6B1F7B00DDD431 /* ViewController.swift */,
 			);
 			path = CentralManager;
-			sourceTree = "<group>";
-		};
-		1C10F27D1E6B1F9200DDD431 /* BLE Stack */ = {
-			isa = PBXGroup;
-			children = (
-				1C10F2801E6B1FBD00DDD431 /* BLE_CentralManager.swift */,
-				1C10F2811E6B1FBD00DDD431 /* BLE_InitStartStop.swift */,
-				1C10F2821E6B1FBD00DDD431 /* BLE_ReadWrite.swift */,
-				1C10F2831E6B1FBD00DDD431 /* BLE_ServicesCharacteristics.swift */,
-				1C10F2841E6B1FBD00DDD431 /* BLE_Connection.swift */,
-				1C10F2851E6B1FBD00DDD431 /* BLE_Tools.swift */,
-				1C10F2991E6B277600DDD431 /* Datas.swift */,
-				1C10F28F1E6B214700DDD431 /* BLEProtocol.swift */,
-			);
-			name = "BLE Stack";
 			sourceTree = "<group>";
 		};
 		1C10F28C1E6B200D00DDD431 /* Singleton */ = {
@@ -311,20 +319,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093E2EFE20FCE1B600579D33 /* BLE_Connection.swift in Sources */,
 				093E2F0420FCE24D00579D33 /* Singleton.swift in Sources */,
+				09DE2FCD20FDE59C00E3AF89 /* BLE_CentralManager.swift in Sources */,
 				093E2F0720FCE31E00579D33 /* Log.swift in Sources */,
-				093E2EFD20FCE1B600579D33 /* BLE_ServicesCharacteristics.swift in Sources */,
-				093E2EFB20FCE1B600579D33 /* BLE_InitStartStop.swift in Sources */,
-				093E2EFA20FCE1B000579D33 /* BLE_CentralManager.swift in Sources */,
 				093E2F0520FCE27600579D33 /* BluetoothController.swift in Sources */,
-				093E2F0020FCE1B600579D33 /* Datas.swift in Sources */,
+				09DE2FD220FDE59C00E3AF89 /* BLE_Tools.swift in Sources */,
+				09DE2FCF20FDE59C00E3AF89 /* BLE_InitStartStop.swift in Sources */,
 				093E2F0320FCE21D00579D33 /* Tools_MACOS.swift in Sources */,
-				093E2EFC20FCE1B600579D33 /* BLE_ReadWrite.swift in Sources */,
-				093E2EFF20FCE1B600579D33 /* BLE_Tools.swift in Sources */,
+				09DE2FD720FDE66700E3AF89 /* Datas.swift in Sources */,
+				09DE2FD120FDE59C00E3AF89 /* BLE_ServicesCharacteristics.swift in Sources */,
 				093E2EEF20FCE19F00579D33 /* ViewController.swift in Sources */,
+				09DE2FD320FDE59C00E3AF89 /* BLEProtocol.swift in Sources */,
+				09DE2FD020FDE59C00E3AF89 /* BLE_ReadWrite.swift in Sources */,
+				09DE2FCE20FDE59C00E3AF89 /* BLE_Connection.swift in Sources */,
 				093E2EED20FCE19F00579D33 /* AppDelegate.swift in Sources */,
-				093E2F0120FCE1B600579D33 /* BLEProtocol.swift in Sources */,
 				093E2F0620FCE30E00579D33 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,20 +342,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C10F27F1E6B1FAE00DDD431 /* Singleton.swift in Sources */,
-				1C10F28A1E6B1FBD00DDD431 /* BLE_Connection.swift in Sources */,
+				09DE2FC620FDE58100E3AF89 /* BLE_InitStartStop.swift in Sources */,
 				1C10F2971E6B22E900DDD431 /* Log.swift in Sources */,
-				1C10F2891E6B1FBD00DDD431 /* BLE_ServicesCharacteristics.swift in Sources */,
-				1C10F2881E6B1FBD00DDD431 /* BLE_ReadWrite.swift in Sources */,
-				1C10F2861E6B1FBD00DDD431 /* BLE_CentralManager.swift in Sources */,
-				1C10F28B1E6B1FBD00DDD431 /* BLE_Tools.swift in Sources */,
-				1C10F29A1E6B277600DDD431 /* Datas.swift in Sources */,
+				09DE2FC520FDE58100E3AF89 /* BLE_ServicesCharacteristics.swift in Sources */,
+				09DE2FCA20FDE58100E3AF89 /* BLE_Tools.swift in Sources */,
 				1C10F26E1E6B1F7B00DDD431 /* ViewController.swift in Sources */,
 				1C10F2921E6B21A700DDD431 /* Tools.swift in Sources */,
+				09DE2FD620FDE66700E3AF89 /* Datas.swift in Sources */,
 				1C10F29C1E6B318F00DDD431 /* Extensions.swift in Sources */,
+				09DE2FC820FDE58100E3AF89 /* BLE_ReadWrite.swift in Sources */,
+				09DE2FCB20FDE58100E3AF89 /* BLEProtocol.swift in Sources */,
 				1C10F26C1E6B1F7B00DDD431 /* AppDelegate.swift in Sources */,
-				1C10F2871E6B1FBD00DDD431 /* BLE_InitStartStop.swift in Sources */,
+				09DE2FC920FDE58100E3AF89 /* BLE_Connection.swift in Sources */,
 				1C10F2951E6B228200DDD431 /* BluetoothController.swift in Sources */,
-				1C10F2901E6B214700DDD431 /* BLEProtocol.swift in Sources */,
+				09DE2FC720FDE58100E3AF89 /* BLE_CentralManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +411,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QP9H83DB6M;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = CentralManager_MacOS/Info.plist;
+				INFOPLIST_FILE = "CentralManager_MacOS/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.ormaa.CentralManager-MacOS";
@@ -435,7 +443,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QP9H83DB6M;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = CentralManager_MacOS/Info.plist;
+				INFOPLIST_FILE = "CentralManager_MacOS/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.ormaa.CentralManager-MacOS";

@@ -14,7 +14,7 @@ import CoreBluetooth
 
 extension BLECentralManager {
 
-    
+
     
     // read signal RSSI DB from peripheral
     //
