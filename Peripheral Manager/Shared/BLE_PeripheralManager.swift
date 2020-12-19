@@ -146,7 +146,7 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
         delegate?.logToScreen(text: "peripheralManager didAdd service")
         
         if error != nil {
-            delegate?.logToScreen(text: ("Error adding services: \(error?.localizedDescription)"))
+            delegate?.logToScreen(text: ("Error adding services: \(error!.localizedDescription)"))
         }
         else {
             delegate?.logToScreen(text: "service:\n" + service.uuid.uuidString)
@@ -172,7 +172,7 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
     //
     func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?){
         if error != nil {
-            delegate?.logToScreen(text: ("peripheralManagerDidStartAdvertising Error :\n \(error?.localizedDescription)"))
+            delegate?.logToScreen(text: ("peripheralManagerDidStartAdvertising Error :\n \(error!.localizedDescription)"))
         }
         else {
             delegate?.logToScreen(text: "peripheralManagerDidStartAdvertising OK")

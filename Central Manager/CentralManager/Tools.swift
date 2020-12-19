@@ -49,50 +49,56 @@ class Tools {
     
     // Display an alert popup
     func simpleAlert(message: String) {
-        let controller = UIApplication.shared.keyWindow?.rootViewController
-        
-        DispatchQueue.main.async {
-        let picker = UIAlertController(title: "Attention", message: message, preferredStyle: .alert)
-        var action: UIAlertAction
-        action = UIAlertAction(title: "OK", style: .default)
-        
-        picker.addAction(action)
-        controller?.present(picker, animated: true, completion: nil)
+
+        if let window = UIApplication.shared.windows.filter({$0.isKeyWindow}).first, let controller = window.rootViewController {
+
+            DispatchQueue.main.async {
+                let picker = UIAlertController(title: "Attention", message: message, preferredStyle: .alert)
+                var action: UIAlertAction
+                action = UIAlertAction(title: "OK", style: .default)
+                
+                picker.addAction(action)
+                controller.present(picker, animated: true, completion: nil)
+            }
         }
     }
 
     // Display an alert popup, use closure for returned value
     func simpleSyncAlert( message: String, completion:@escaping (_ message: String) -> Void) {
-        let controller = UIApplication.shared.keyWindow?.rootViewController
 
-        let picker = UIAlertController(title: "Attention",
-                                       message: message, preferredStyle: .alert)
-        var action: UIAlertAction
-        action = UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-            completion("ok")
-        })
+        if let window = UIApplication.shared.windows.filter({$0.isKeyWindow}).first, let controller = window.rootViewController {
+            
+            let picker = UIAlertController(title: "Attention",
+                                           message: message, preferredStyle: .alert)
+            var action: UIAlertAction
+            action = UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+                completion("ok")
+            })
 
-        picker.addAction(action)
-        controller?.present(picker, animated: true, completion: nil)
+            picker.addAction(action)
+            controller.present(picker, animated: true, completion: nil)
+        }
     }
 
     // Display an alert popup, use closure for returned value
     func SyncAlert( message: String, completion:@escaping (_ retour: String) -> Void) {
-        let controller = UIApplication.shared.keyWindow?.rootViewController
 
-        let picker = UIAlertController(title: "Attention", message: message, preferredStyle: .alert)
-        var action: UIAlertAction
-        action = UIAlertAction(title: "Oui", style: .default, handler: { (UIAlertAction) in
-            completion("oui")
-        })
-        var action2: UIAlertAction
-        action2 = UIAlertAction(title: "Non", style: .default, handler: { (UIAlertAction) in
-            completion("non")
-        })
-        
-        picker.addAction(action)
-        picker.addAction(action2)
-        controller?.present(picker, animated: true, completion: nil)
+        if let window = UIApplication.shared.windows.filter({$0.isKeyWindow}).first, let controller = window.rootViewController {
+
+            let picker = UIAlertController(title: "Attention", message: message, preferredStyle: .alert)
+            var action: UIAlertAction
+            action = UIAlertAction(title: "Oui", style: .default, handler: { (UIAlertAction) in
+                completion("oui")
+            })
+            var action2: UIAlertAction
+            action2 = UIAlertAction(title: "Non", style: .default, handler: { (UIAlertAction) in
+                completion("non")
+            })
+            
+            picker.addAction(action)
+            picker.addAction(action2)
+            controller.present(picker, animated: true, completion: nil)
+        }
     }
     
  

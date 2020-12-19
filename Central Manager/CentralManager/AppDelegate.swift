@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let singleton = Singleton.sharedInstance()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         singleton.logger.log("application didFinishLaunchingWithOptions")
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // We need to initialize a central manager, with same name.
         // a bluetooth event accoured.
         //
-        if let peripheralManagerIdentifiers: [String] = launchOptions?[UIApplicationLaunchOptionsKey.bluetoothCentrals] as? [String]{
+        if let peripheralManagerIdentifiers: [String] = launchOptions?[UIApplication.LaunchOptionsKey.bluetoothCentrals] as? [String]{
             if peripheralManagerIdentifiers.count > 1 {
                 // TODO : manage this case
             }

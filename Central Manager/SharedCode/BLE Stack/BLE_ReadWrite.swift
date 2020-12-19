@@ -170,7 +170,7 @@ extension BLECentralManager {
         }
         
         rssiDBConnected = RSSI
-        let index = peripherals.index(of: peripheral)
+        let index = peripherals.firstIndex(of: peripheral)
         if index != nil {
             rssiDB[index!] = RSSI
         }

@@ -26,6 +26,8 @@ extension BLEPeripheralManager {
             return "unknown"
         case .unsupported:
             return "unsupported"
+        @unknown default:
+            return "unknown"
         }
     }
 

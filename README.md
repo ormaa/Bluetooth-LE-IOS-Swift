@@ -1,6 +1,10 @@
 # Bluetooth LE IOS Swift
 
-This project contains 3 applications, written in Swift 4.1, for IOS 11
+Please note thet the purpose here is not to implement a perfect nice best design pattern, but demonstrate how to use, at the best I can, the BLE on iPhone, iPad ( and soon on Mac )
+it is bnetter, for me, to provide a way for anybody to use my code, in the design pattern you could choose.
+so : the code in iplemented in a simple design pattern. that's it :o)
+
+This project contains 3 applications, written in Swift 5, for IOS 13 or above.
 
 - a central manager, which will comunicate with bluetooth peripheral
 - a peripheral manager, which will simulate a bluetooth device, for people who don't have real bluetooth developpement board
@@ -10,12 +14,13 @@ This project contains 3 applications, written in Swift 4.1, for IOS 11
 
 # Who I am ?
 
-My name is **Olivier Robin**, I am a Freelance developper, for IOS. I use mainly Swift 2, or 3. soon, I will switch to Swift 4.
+My name is **Olivier Robin**, I am a Freelance developper, for IOS, specialized in Swift ( all version ).
 I build native App for iPhone, iPad, Apple Watch, Apple TV, and MAC.
 
 I work for French company, but also for any company where we can talk in English, or French :o)
 
-During 6 years, I worked for a US Company ( Bioclinica ). The time spent with them was great. Now, Since megin of 2016, I decided to work for my own company, in order to choose my project, my technology, my method of work, my road map...
+During several years, I worked for a US Company ( Bioclinica ). The time spent with them was great. Now, 
+Since megin of 2016, I decided to work for my own company, in order to choose my project, my technology, my method of work, my road map...
 
 More infos on my Website : www.ormaa.fr
 
