@@ -79,7 +79,7 @@ extension BLECentralManager {
 
                     let data: Data = message.data(using: String.Encoding.utf16)!
                     peripheralConnected?.writeValue(data, for: oneCharacteristic, type: CBCharacteristicWriteType.withResponse)
-                    log("write request sent")
+                    log("write request sent to peripheral")
                 }
             })
         })

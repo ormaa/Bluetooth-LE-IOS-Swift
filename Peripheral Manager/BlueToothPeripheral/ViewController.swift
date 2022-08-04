@@ -19,6 +19,7 @@ class MyViewController: UIViewController, BLEPeripheralProtocol {
     var refreshLogs: Timer?
     var ble: BLEPeripheralManager?
 
+    var timerOn: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +36,27 @@ class MyViewController: UIViewController, BLEPeripheralProtocol {
     @IBAction func switchPeripheralOnOff(_ sender: AnyObject) {
 
         if self.switchPeripheral.isOn {
+            
             print("starting peripheral")
+
             ble = BLEPeripheralManager()
             ble?.delegate = self
             ble!.startBLEPeripheral()
+            timerOn = true
+
+//            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] timer in
+//                print("Timer fired!")
+//
+//                if !self.timerOn {
+//                    timer.invalidate()
+//                }
+//            }
         }
         else {
             print("stopping Peripheral")
-        ble!.stopBLEPeripheral()
+            ble!.stopBLEPeripheral()
+            timerOn = false
+            logTextView.text = ""
         }
     
     }

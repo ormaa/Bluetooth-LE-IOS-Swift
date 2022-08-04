@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BLECentralManager.initCentralManager(bleDelegate:):BLE_InitStartStop.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIApplication.shared.delegate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BLECentralManager.getPeripheralUUID(number:):BLE_Tools.swift">
+      </ContextState>
+      <ContextState
+         contextName = "BLECentralManager.centralManagerDidUpdateState(_:):BLE_InitStartStop.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

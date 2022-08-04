@@ -18,10 +18,10 @@ import CoreBluetooth
 
 
 
+
 // BlueTooth do not work if it not instanciated, called, managed, from a uiview controller, linked to a .xib, or storyboard
 //
 class BLECentralManager : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
-    
     
     var appDelegate:AppDelegate? = nil
 
@@ -46,7 +46,8 @@ class BLECentralManager : NSObject, CBCentralManagerDelegate, CBPeripheralDelega
     var valueReadBytes: [UInt8] = []
 
     var bleDelegate: BLEProtocol?
-    
+
+    var searchedPeripheralUUID: String = ""
 }
 
 

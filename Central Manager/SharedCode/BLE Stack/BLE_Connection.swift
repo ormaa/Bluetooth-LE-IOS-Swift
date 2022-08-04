@@ -27,6 +27,7 @@ extension BLECentralManager {
             
             for i in 0...peripherals.count - 1 {
                 let n = getPeripheralUUID(number: i)
+                print(n)
                 if n == serviceUUID {
                     connect(peripheral: peripherals[i])
                 }
@@ -40,6 +41,8 @@ extension BLECentralManager {
     //
     func connect(peripheral: CBPeripheral?) {
         //stopBLEScan()
+
+        log("connect to peripheral \(peripheral?.identifier)")
         
         if (peripheral != nil) {
             peripheralConnecting = peripheral

@@ -8,7 +8,7 @@
 
 
 import Foundation
-//import UIKit
+import UIKit
 import CoreBluetooth
 
 
@@ -28,13 +28,13 @@ extension BLECentralManager {
     func initCentralManager(bleDelegate: BLEProtocol) {
         self.bleDelegate = bleDelegate
 
-//        #if IOS
+////        #if IOS
 //        appDelegate =  UIApplication.shared.delegate as! AppDelegate?
-//        #endif
-//        #if MACOS
-//        appDelegate =  UIApplication.shared.delegate as! AppDelegate?
-//        #endif
-        
+////        #endif
+////        #if MACOS
+////        appDelegate =  UIApplication.shared.delegate as! AppDelegate?
+////        #endif
+//        
         log("initCentralManager - Starting CentralManager")
         bleError = ""
         blueToothEnabled = nil
@@ -51,22 +51,40 @@ extension BLECentralManager {
         
         // pause the processor, 0.5 sec, before initalize it
         // is it needed ???
-        usleep(500000)
+        //usleep(500000)
         
         centralManager = CBCentralManager(delegate: self, queue: nil, options:[CBCentralManagerOptionRestoreIdentifierKey: "fr.ormaa.centralManager"])
     }
 
-    
+    func stop() {
+        log("initCentralManager - Stop CentralManager")
+
+        // in case of centralManager was already started, stop scan, and free the object
+        centralManager?.stopScan()
+        centralManager = nil
+
+        bleError = ""
+        blueToothEnabled = nil
+
+        // Delete all device, services, rssDB found previously
+        peripherals.removeAll()
+        rssiDB.removeAll()
+        servicesDiscovered.removeAll()
+        advertisementDatas.removeAll()
+
+    }
     
     // start to scan peripherals
-    func startScan() {
+    func startScan(uid: String) {
 
-        log("startScan peripheral")
-        let BLEServiceUUID = CBUUID(string: "00001901-0000-1000-8000-00805F9B34FB")
+        searchedPeripheralUUID = uid
+
+        log("startScan for peripheral \(uid)")
+        let BLEServiceUUID = CBUUID(string: searchedPeripheralUUID) // "00001901-0000-1000-8000-00805F9B34FB")
         centralManager?.scanForPeripherals(withServices: [BLEServiceUUID], options: [CBCentralManagerScanOptionAllowDuplicatesKey: false])
     }
     
-    
+
     
     // Stop scan
     func stopScan() {
@@ -81,8 +99,10 @@ extension BLECentralManager {
     // called after init centralManager
     //
     func centralManagerDidUpdateState(_ central: CBCentralManager){
+        appDelegate?.singleton.logger.log(" ")
         appDelegate?.singleton.logger.log("centralManagerDidUpdateState")
-        
+        appDelegate?.singleton.logger.log(" ")
+
         if (central.state == CBManagerState.poweredOn){
             log("BlueTooth is powered ON")
             blueToothEnabled = true
@@ -90,6 +110,7 @@ extension BLECentralManager {
             log("BlueTooth is OFF or disconnected !!!")
             blueToothEnabled = false
         }
+
     }
     
 
@@ -98,24 +119,42 @@ extension BLECentralManager {
     //
     public func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
         
-        log("will restore connection")
-        
-        if let peripheralsObject = dict[CBCentralManagerRestoredStatePeripheralsKey] {
-            let peripherals = peripheralsObject as! Array<CBPeripheral>
-            if peripherals.count > 0 {
-                log("Peripheral found")
-                
-                let peripheral = peripherals[0]
-                peripheral.delegate = self
-                self.peripherals.append(peripheral)
-                self.rssiDB.append(NSNumber())
-                self.advertisementDatas.append(oneAdvertisement( array: ["none": "none"]))
+        log("centralManager will restore connection")
 
-                if getState(peripheral.state) == "connected" {
-                    log("connection to peripheral")
+        if let delegate = appDelegate,
+           let id = delegate.singleton.centralManagerToRestore {
+
+            log("retore id \(id)")
+            
+            if let peripheralsObject = dict[CBCentralManagerRestoredStatePeripheralsKey] {
+                let peripherals = peripheralsObject as! Array<CBPeripheral>
+
+                for peripheral in peripherals {
+                    log("Peripheral found \(peripheral.identifier)")
+
+                    peripheral.delegate = self
+                    self.peripherals.append(peripheral)
+                    self.rssiDB.append(NSNumber())
+                    self.advertisementDatas.append(oneAdvertisement( array: ["none": "none"]))
+
                     self.connect(peripheral: peripheral)
                 }
+                //            if peripherals.count > 0 {
+                //                log("Peripheral found, nb = \(peripherals.count)")
+                //
+                //                let peripheral = peripherals[0]
+                //                peripheral.delegate = self
+                //                self.peripherals.append(peripheral)
+                //                self.rssiDB.append(NSNumber())
+                //                self.advertisementDatas.append(oneAdvertisement( array: ["none": "none"]))
+                //
+                //                if getState(peripheral.state) == "connected" {
+                //                    log("connection to peripheral")
+                //                    self.connect(peripheral: peripheral)
+                //                }
+                //            }
             }
+
         }
     }
     
@@ -154,6 +193,7 @@ extension BLECentralManager {
             self.advertisementDatas.append(oneAdvertisement(array: advertisementData))
         }
         else {
+
             self.advertisementDatas.append(oneAdvertisement( array: ["none": "none"])) //key: "none", value: "none"))
         }
         

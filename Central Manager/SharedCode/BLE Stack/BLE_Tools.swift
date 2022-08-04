@@ -39,15 +39,19 @@ extension BLECentralManager {
     
     
     func isDeviceFound(uuidName: String) ->Bool {
-        
+        log("is devie found")
+
         if peripherals.count > 0 {
-            
+            log("devices :")
             for i in 0...peripherals.count - 1 {
                 let n = getPeripheralUUID(number: i)
+                log("device : \(n)")
                 if n == uuidName {
                     return true
                 }
             }
+        } else {
+            log("no BLE devices found")
         }
         
         return false
@@ -91,8 +95,10 @@ extension BLECentralManager {
             
             let str = String(describing: uuid[0])
             return str
+        } else {
+            return "advertisement issue. got " + String(describing: a.array)
         }
-        return ""
+        // return ""
     }
     
     //Return peripheral name

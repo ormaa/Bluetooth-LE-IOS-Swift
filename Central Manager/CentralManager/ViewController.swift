@@ -23,11 +23,9 @@ class ViewController: UIViewController, BLEProtocol {
     let peripheralUUID = "00001901-0000-1000-8000-00805F9B34FB"
     let characRead = "2AC6A7BF-2C60-42D0-8013-AECEF2A124C0" //"00002B00-0000-1000-8000-00805F9B34FB"
     let characWrite = "9B89E762-226A-4BBB-A381-A4B8CC6E1105"
-    
-    
+
     var timerRead: Timer? = nil
     var timerWrite: Timer? = nil
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +44,12 @@ class ViewController: UIViewController, BLEProtocol {
         
         bleLogTextView.text = ""
     
-        if appDelegate!.singleton.appRestored {
-            appDelegate!.singleton.bluetoothController.restoreCentralManager(viewControllerDelegate: self,
-                                                                             centralName: appDelegate!.singleton.centralManagerToRestore)
+        if appDelegate!.singleton.appRestored,
+        let id = appDelegate!.singleton.centralManagerToRestore {
+
+            log("View did appear, restore peropheral connection \(id)")
+            
+            appDelegate!.singleton.bluetoothController.restoreCentralManager(viewControllerDelegate: self, centralName: id )
         }
     }
     
@@ -65,7 +66,14 @@ class ViewController: UIViewController, BLEProtocol {
             self.bleLogTextView.text = txt + text
         }
     }
-    
+
+
+    @IBAction func stopCentralManager(_ sender: Any) {
+        self.appDelegate!.singleton.bluetoothController.stopCentralManager()
+
+        self.bleLogTextView.text = ""
+    }
+
     
     // user clicked on start central button
     @IBAction func startCentralClick(_ sender: Any) {
@@ -74,9 +82,13 @@ class ViewController: UIViewController, BLEProtocol {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
             
             self.addText(text: "Starting central Manager")
+
+            self.appDelegate!.singleton.bluetoothController.appDelegate = self.appDelegate      // TODO remove this ugly thing
+            self.appDelegate!.singleton.bluetoothController.ble.appDelegate = self.appDelegate      // TODO remove this ugly thing
+
             if !self.appDelegate!.singleton.bluetoothController.startCentralManager(viewControllerDelegate: self) {
                 // Display en error
-                self.addText(text: "I believe that Bluetooth is off, because starting centrzl manager return an error")
+                self.addText(text: "I believe that Bluetooth is off, because starting central manager return an error")
                 return
             }
 
@@ -96,8 +108,6 @@ class ViewController: UIViewController, BLEProtocol {
                 return
             }
 
-            self.addText(text: "connected to peripheral : " + self.peripheralUUID)
-
             if !self.appDelegate!.singleton.bluetoothController.discoverServices() {
                 self.addText(text: "discover service and characteristics failed !!!")
                 return
@@ -108,12 +118,15 @@ class ViewController: UIViewController, BLEProtocol {
             self.addText(text: "request notification for charac :\n" + self.characRead)
             self.appDelegate!.singleton.bluetoothController.requestNotify(uuid: self.characRead)
 
-            self.addText(text: "Read a value, from peripheral :\n" + self.characRead)
+            self.addText(text: "\nRead a value from peripheral " + self.characRead)
             self.appDelegate?.singleton.bluetoothController.read(uuid: self.characRead)
             
             self.appDelegate?.singleton.bluetoothController.write(uuid: self.characWrite, message: "I am ok guy")
-            self.addText(text: "write requested : " + self.characWrite)
-            
+            self.addText(text: "\nwrite to peripheral : I am ok guy, char :" + self.characWrite)
+
+            self.appDelegate?.singleton.bluetoothController.writeAsync(uuid: self.characWrite, message: "hello mate")
+            self.addText(text: "\nwriteAsync to peripheral : hello mate, char :" + self.characWrite)
+
             // start some timer, which will read or write data from / to peripheral
             //self.timerRead = Timer.scheduledTimer(timeInterval: TimeInterval(2), target: self, selector: #selector(self.read), userInfo: nil, repeats: true)
             //self.timerWrite = Timer.scheduledTimer(timeInterval: TimeInterval(5), target: self, selector: #selector(self.write), userInfo: nil, repeats: true)
@@ -147,18 +160,20 @@ class ViewController: UIViewController, BLEProtocol {
     
     // disconnected : ble is too far away, or sitched off
     func disconnected(message: String) {
-        
+        self.addText(text: "disconnected from peripheral : " + message)
     }
     
     
     
     // connection to ble failed
     func failConnected(message: String) {
+        self.addText(text: "connection to peripheral failed : " + message)
     }
     
     
     
     func connected(message: String) {
+        self.addText(text: "connected to peripheral : " + message + " - " + self.peripheralUUID)
     }
     
 

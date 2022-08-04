@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         singleton.logger.log("application didFinishLaunchingWithOptions")
         
         singleton.appRestored = false
-        singleton.centralManagerToRestore = ""
-        
+        singleton.centralManagerToRestore = nil
+
+        registerLocal()
+
         // if waked up by the system, with bluetooth identifier in parameter :
         // We need to initialize a central manager, with same name.
         // a bluetooth event accoured.
@@ -48,6 +51,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+
+
+    @objc func registerLocal() {
+        let center = UNUserNotificationCenter.current()
+
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Yay!")
+            } else {
+                print("D'oh")
+            }
+        }
+    }
+
+    @objc func scheduleLocal() {
+        let hour = Calendar.current.component(.hour, from: Date())
+        let min = Calendar.current.component(.minute, from: Date())
+        let sec = Calendar.current.component(.second, from: Date())
+
+        var dateComponents = DateComponents()
+        dateComponents.hour = hour  // 10
+        dateComponents.minute = min // 30
+        dateComponents.second = sec + 5
+
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+        let content = UNMutableNotificationContent()
+        content.title = "Title goes here"
+        content.body = "Main text goes here"
+        content.categoryIdentifier = "customIdentifier"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = UNNotificationSound.default
+
+        let center = UNUserNotificationCenter.current()
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

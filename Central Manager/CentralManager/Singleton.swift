@@ -25,7 +25,7 @@ class Singleton: NSObject {
     
     // App restore after IOS killed it, and bluetooth status has changed : device switch on, or advertise something.
     var appRestored = false
-    var centralManagerToRestore = ""
+    var centralManagerToRestore: String?
     
     // logger
     let logger = Log()

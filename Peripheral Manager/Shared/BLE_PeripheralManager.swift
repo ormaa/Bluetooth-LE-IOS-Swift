@@ -87,7 +87,7 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
     //
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager)
     {
-        delegate?.logToScreen(text: "peripheralManagerDidUpdateState")
+        delegate!.logToScreen(text: "peripheralManagerDidUpdateState \(peripheral.state)")
 
         if peripheral.state == .poweredOn {
             self.createServices()
@@ -175,7 +175,7 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
             delegate?.logToScreen(text: ("peripheralManagerDidStartAdvertising Error :\n \(error!.localizedDescription)"))
         }
         else {
-            delegate?.logToScreen(text: "peripheralManagerDidStartAdvertising OK")
+            delegate?.logToScreen(text: "peripheralManagerDidStartAdvertising done.\n")
         }
     }
     
@@ -190,7 +190,7 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
             self.notifyCentral = central
             
             // start a timer, which will update the value, every xyz seconds.
-            self.notifyValueTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.notifyValue), userInfo: nil, repeats: true)
+            self.notifyValueTimer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.notifyValue), userInfo: nil, repeats: true)
         }
 
     }
@@ -201,11 +201,9 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
     //
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {
         
-        delegate?.logToScreen(text: "peripheralManager didReceiveRead")
+        delegate?.logToScreen(text: "peripheralManager didReceiveRead request")
         delegate?.logToScreen(text: "request uuid: " + request.characteristic.uuid.uuidString)
-        
 
-        
         // prepare advertisement data
         let data: Data = TextToAdvertise.data(using: String.Encoding.utf16)!
         request.value = data //characteristic.value
@@ -222,7 +220,8 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
     // called when central manager send write request
     //
     public func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
-        delegate?.logToScreen(text: "peripheralManager didReceiveWrite")
+        delegate?.logToScreen(text: "peripheralManager didReceiveWrite request")
+
         for r in requests {
             delegate?.logToScreen(text: "request uuid: " + r.characteristic.uuid.uuidString)
         }
@@ -230,6 +229,10 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
         if requests.count > 0 {
             let str = NSString(data: requests[0].value!, encoding:String.Encoding.utf16.rawValue)!
             print("value sent by central Manager :\n" + String(describing: str))
+            delegate?.logToScreen(text: "string received \(str) ")
+        } else {
+            print("nothing sent by centralManager")
+            delegate?.logToScreen(text: "NO string received")
         }
         peripheral.respond(to: requests[0], withResult: CBATTError.success)
     }
@@ -238,7 +241,7 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
     
     
     func respond(to request: CBATTRequest, withResult result: CBATTError.Code) {
-        delegate?.logToScreen(text: "respnse requested")
+        delegate?.logToScreen(text: "response requested")
     }
     
     
@@ -253,10 +256,14 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
     func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {
         delegate?.logToScreen(text: "peripheral service modified")
     }
-    
 
- 
-    
+
+    func peripheral(_ peripheral: CBPeripheral, willRestoreState: [String : Any]) {
+
+        print("Will restore peripheral to central connection")
+
+
+    }
     
 }
 

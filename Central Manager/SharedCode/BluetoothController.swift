@@ -69,24 +69,28 @@ class BluetoothController: BLEProtocol {
         
         //mainMenuDelegate?.displayText(message: "Recherche de votre device")
         log("----------------------------------------------------------------------")
-        log("startDiscoverPeripherals")
+        log("startCentralManager")
         
         // start the central manager
+        self.ble.appDelegate = self.appDelegate
         self.ble.initCentralManager(bleDelegate: self )
-        
+
         // centralmanager will fire an event : bluetooth on, or off
         let b = self.waitBluetoothStatus()
         if !b {
             return false
         }
         
-        // start to scan for peripherals
-        self.ble.startScan()
+//        // start to scan for peripherals
+//        self.ble.startScan()
     
-        log("startDiscoverPeripherals completed")
+        log("startCentralManager completed")
         return true
     }
-    
+
+    func stopCentralManager() {
+        self.ble.stop()
+    }
     
     // wait for bluetooth status is true or false
     //
@@ -108,7 +112,10 @@ class BluetoothController: BLEProtocol {
         
         log("----------------------------------------------------------------------")
         log("Search for Device: " + uuidName)
-        
+
+        // start to scan for peripherals
+        self.ble.startScan(uid: uuidName)
+
         self.start = Date()
         repeat {
             usleep(500000)
@@ -191,6 +198,10 @@ class BluetoothController: BLEProtocol {
         ble.writeValue(characUUID: uuid, message: message)
     }
     
+    func writeAsync(uuid: String, message: String) {
+        ble.writeValueAsync(characUUID: uuid, value: message.data(using: .utf16)!)
+    }
+
     func requestNotify(uuid: String) {
         ble.setNotify(characteristicUUID: uuid)
     }
@@ -207,6 +218,7 @@ class BluetoothController: BLEProtocol {
         
         viewControllerDelegate?.valueRead(message: message)
     }
+
     func valueWrite(message: String) {
         log("valueRead : " + message)
         
@@ -219,19 +231,24 @@ class BluetoothController: BLEProtocol {
     // disconnected : ble is too far away, or sitched off
     func disconnected(message: String) {
         log("disconnect event")
-        
-        if !self.appDelegate!.singleton.appRestored {
-            if !isConnected {
-                // if connection fail, this event can be fired even if we are not already connected
-                return
+
+        if let delegate = self.appDelegate {
+            if !delegate.singleton.appRestored {
+                if !isConnected {
+                    // if connection fail, this event can be fired even if we are not already connected
+                    log("connection failed. is not connected")
+                    return
+                }
             }
+
+            isConnected = false
+            disconnectEvent = true  // allow to know that we are not connected, and there is an event.
+
+            // Will display some message
+            viewControllerDelegate?.disconnected(message: message)
+        } else {
+            log("delegate no initalized !")
         }
-        
-        isConnected = false
-        disconnectEvent = true  // allow to know that we are not connected, and there is an event.
-        
-        // Will display some message
-        viewControllerDelegate?.disconnected(message: message)
     }
     
     
