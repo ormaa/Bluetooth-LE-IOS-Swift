@@ -160,20 +160,20 @@ class ViewController: UIViewController, BLEProtocol {
     
     // disconnected : ble is too far away, or sitched off
     func disconnected(message: String) {
-        self.addText(text: "disconnected from peripheral : " + message)
+        self.addText(text: "\ndisconnected from peripheral : " + message)
     }
     
     
     
     // connection to ble failed
     func failConnected(message: String) {
-        self.addText(text: "connection to peripheral failed : " + message)
+        self.addText(text: "\nconnection to peripheral failed : " + message)
     }
     
     
     
     func connected(message: String) {
-        self.addText(text: "connected to peripheral : " + message + " - " + self.peripheralUUID)
+        self.addText(text: "\nconnected to peripheral : " + message + " - " + self.peripheralUUID)
     }
     
 

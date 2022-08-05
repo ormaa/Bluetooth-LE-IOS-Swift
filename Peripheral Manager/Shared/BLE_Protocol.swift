@@ -10,6 +10,6 @@ import Foundation
 import CoreBluetooth
 
 protocol BLEPeripheralProtocol {
-    func logToScreen(text: String)
+    func logToScreen(_ text: String)
 }
 

@@ -37,7 +37,7 @@ class MyViewController: UIViewController, BLEPeripheralProtocol {
 
         if self.switchPeripheral.isOn {
             
-            print("starting peripheral")
+            logToScreen("starting peripheral")
 
             ble = BLEPeripheralManager()
             ble?.delegate = self
@@ -64,14 +64,13 @@ class MyViewController: UIViewController, BLEPeripheralProtocol {
 
     
 
-    func logToScreen(text: String) {
+    func logToScreen(_ text: String) {
         print(text)
         
         var str = logTextView.text + "\n"
         str += text
         logTextView.text = str
     }
-    
     
     
 }

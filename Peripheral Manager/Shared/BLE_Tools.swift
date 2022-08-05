@@ -32,19 +32,15 @@ extension BLEPeripheralManager {
     }
 
     
-    
-    
-
     @objc func notifyValue() {
-        delegate?.logToScreen(text: "Notify a value to central manager")
-        
+
         // Set the data to notify
         let text = TextToNotify + " " + String(describing: cpt)
         let data: Data = text.data(using: String.Encoding.utf16)!
         cpt += 1
-        
-        delegate?.logToScreen(text: text)
-        
+
+        delegate?.logToScreen( "Notify a value to central manager \(text)")
+
         // update the value, which will generate a notification event on central side
         localPeripheralManager.updateValue(data, for: self.notifyCharac!, onSubscribedCentrals: [self.notifyCentral!])
         
