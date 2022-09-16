@@ -41,10 +41,10 @@ The App will start the central, discover the services + Characteristics, connect
 App request to work in background, for Bluetooth event. for that, in info.plist, I added this :
 
 ```
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-central</string>
-	</array>
+<key>UIBackgroundModes</key>
+<array>
+	<string>bluetooth-central</string>
+</array>
 
 ```
 
@@ -59,7 +59,7 @@ example of code you could call, when you detect the background mode :
 
 call registerBackgroundTask()
 
-```
+```swift
     func registerBackgroundTask() {
         appController.log("register bacground task")
         backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
@@ -77,7 +77,7 @@ call registerBackgroundTask()
 
 To check what is the app state :
 
-```
+```swift
     switch UIApplication.shared.applicationState {
             case .active:
             // DO something
@@ -99,7 +99,7 @@ There is a way to request to be wake up by IOS, when the bluetooth device update
 
 To be able to have this behavior, we need to start the central manager, with some particular parameter :
 
-```
+```swift
         centralManager = CBCentralManager(delegate: self, queue: nil, options:[CBCentralManagerOptionRestoreIdentifierKey: "fr.ormaa.centralManager"])
 
 ```
@@ -111,7 +111,7 @@ Note : in this case, the app stay in background, nothign is displayed on screen.
 when the peripheral is dosconnected, visible by ios bluetooth again, when peripheral notify some value, the App is restarted.
 in my appdelegate, I added this code
 
-```
+```swift
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -152,16 +152,18 @@ I place some flag and value, in a singleton class, to tell to the main controlle
 
 in my main controller, here is what happen :
 
-```
+```swift
         if appDelegate!.singleton.appRestored {
-            appDelegate!.singleton.bluetoothController.restoreCentralManager(viewControllerDelegate: self,
-                                                                             centralName: appDelegate!.singleton.centralManagerToRestore)
+            appDelegate!.singleton
+			.bluetoothController
+			.restoreCentralManager(viewControllerDelegate: self,
+					       centralName: appDelegate!.singleton.centralManagerToRestore)
         }
         
 ```
 RestoreCentralManager will do that :
 
-```
+```swift
         centralManager = CBCentralManager(delegate: self, queue: nil, options:[CBCentralManagerOptionRestoreIdentifierKey: "fr.ormaa.centralManager"])
 ```
 
@@ -170,7 +172,7 @@ WE DO NOT call scan peripheral, or retreive peripheral !
 
 in the centralmanager class, I have implemented this :
 
-```
+```swift
     public func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
         
         log("will restore connection")
